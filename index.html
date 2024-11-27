@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number Guessing Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Retro Number Guessing Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Retro font -->
+    <link rel="stylesheet" href="style.css"> <!-- Linking the updated CSS -->
 </head>
 <body>
     <div class="game-container">
-        <h1>Number Guessing Game</h1>
+        <h1>Retro Number Guessing Game</h1>
         <p id="instructions">I'm thinking of a number between 1 and 100.</p>
-        <p id="result">Enter your guess:</p> <!-- This will show feedback for the guesses (low/high/etc.) -->
+        <p id="result">Enter your guess:</p> <!-- Feedback on guesses -->
         <input type="number" id="guessInput" placeholder="Your guess" />
         <div class="button-container">
             <button id="submitButton">Submit Guess</button>
             <button id="resetButton">Reset Game</button>
         </div>
     </div>
+    <div class="popup">
+        <div class="popup-content">
+            <h2>Game Over</h2>
+            <p>You've guessed the number!</p>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
