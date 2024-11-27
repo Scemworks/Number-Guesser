@@ -1,45 +1,45 @@
 /* Basic styles for the whole page */
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #1b1b1b; /* Dark background for arcade feel */
+    font-family: 'Press Start 2P', cursive; /* Classic retro arcade font */
+    background-color: #000; /* Black background for arcade feel */
     color: #f0f8ff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    transition: background-color 0.3s ease;
-    padding: 0 15px;
+    padding: 0;
     box-sizing: border-box;
 }
 
 /* Container for the game */
 .game-container {
     text-align: center;
-    background-color: #111;
+    background-color: #222;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     width: 100%;
     max-width: 360px;
     animation: fadeIn 1s ease-out;
-    border: 3px solid #00ff00; /* Neon green border for arcade feel */
+    border: 3px solid #ff00ff; /* Neon pink border for arcade feel */
     margin: 20px;
     font-weight: bold;
+    font-size: 18px;
 }
 
 /* Title styling */
 h1 {
-    color: #00ff00;
-    font-size: 28px;
+    color: #ff00ff;
+    font-size: 36px;
     margin-bottom: 20px;
-    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.8); /* Glowing text */
 }
 
 /* Instruction text */
 #instructions {
     font-size: 16px;
-    color: #00ff00;
+    color: #00ff00; /* Neon green color */
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -47,15 +47,16 @@ h1 {
 /* Result label */
 #result {
     font-size: 18px;
-    color: #32CD32; /* Light green color for text */
+    color: #ffcc00; /* Bright yellow for the result */
     margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 0, 0.8);
 }
 
 /* Input field styling */
 input {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Press Start 2P', cursive;
     font-size: 16px;
-    padding: 10px;
+    padding: 12px;
     width: 80%;
     margin: 10px 0;
     border: 2px solid #00ff00;
@@ -69,8 +70,8 @@ input {
 
 /* Input focus effect */
 input:focus {
-    border-color: #32CD32;
-    box-shadow: 0 0 8px rgba(50, 205, 50, 0.6);
+    border-color: #ffcc00; /* Yellow focus border */
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
 }
 
 /* Button container for styling */
@@ -82,9 +83,9 @@ input:focus {
 
 /* Common button styles */
 button {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Press Start 2P', cursive;
     font-size: 14px;
-    padding: 10px 20px;
+    padding: 12px 20px;
     margin: 5px;
     cursor: pointer;
     border: 2px solid #00ff00;
@@ -96,13 +97,13 @@ button {
 
 /* Button hover and click effects */
 button:hover {
-    background-color: #00ff00;
+    background-color: #ff00ff; /* Neon pink hover */
     color: #111;
     transform: scale(1.05);
 }
 
 button:active {
-    background-color: #32CD32;
+    background-color: #ffcc00; /* Neon yellow active state */
     color: #111;
     transform: scale(0.98);
 }
@@ -116,7 +117,7 @@ button:active {
 /* Reset button color */
 #resetButton {
     background-color: #333;
-    color: #ff4500;
+    color: #ff4500; /* Retro red for reset button */
 }
 
 /* Popup styling */
@@ -141,14 +142,15 @@ button:active {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     width: 300px;
-    border: 3px solid #00ff00;
+    border: 3px solid #ff00ff; /* Neon pink border for popup */
 }
 
 /* Popup heading */
 .popup h2 {
     font-size: 24px;
-    color: #00ff00;
+    color: #ff00ff;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.8);
 }
 
 /* Popup message */
@@ -161,7 +163,7 @@ button:active {
 /* Close button styling */
 #closePopup {
     padding: 10px 20px;
-    background-color: #00ff00;
+    background-color: #ff00ff;
     color: #111;
     border: none;
     border-radius: 5px;
@@ -169,7 +171,7 @@ button:active {
 }
 
 #closePopup:hover {
-    background-color: #32CD32;
+    background-color: #ffcc00; /* Yellow hover effect */
 }
 
 /* Animation for fading in the game and popup */
@@ -185,7 +187,7 @@ button:active {
 /* Mobile responsive adjustments */
 @media (max-width: 600px) {
     body {
-        padding: 0; /* Remove side padding for smaller screens */
+        padding: 0;
     }
 
     .game-container {
@@ -195,7 +197,7 @@ button:active {
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     #instructions {
