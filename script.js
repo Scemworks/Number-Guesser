@@ -7,6 +7,8 @@ const guessInput = document.getElementById('guessInput');
 const resultLabel = document.getElementById('result');
 const submitButton = document.getElementById('submitButton');
 const resetButton = document.getElementById('resetButton');
+const popup = document.querySelector('.popup');
+const closePopupButton = document.getElementById('closePopup');
 
 // Function to handle the guess
 submitButton.addEventListener('click', function () {
@@ -44,9 +46,9 @@ submitButton.addEventListener('click', function () {
             resultLabel.style.color = 'red';
         }
     } else {
-        // Show congratulatory alert when the user guesses correctly
-        alert(`Congratulations! You've guessed the number in ${attempts} attempts!`);
-        resetGame(); // Reset game after showing the congratulations alert
+        // Show congratulatory popup when the user guesses correctly
+        showPopup(`Congratulations! You've guessed the number in ${attempts} attempts!`);
+        resetGame(); // Reset game after showing the congratulatory message
     }
 
     guessInput.value = ''; // Clear input field after each guess
@@ -62,3 +64,15 @@ function resetGame() {
     resultLabel.style.color = 'green'; // Reset color
     guessInput.value = ''; // Clear the input field
 }
+
+// Function to show the congratulatory popup
+function showPopup(message) {
+    const popupMessage = popup.querySelector('p');
+    popupMessage.textContent = message;
+    popup.style.display = 'flex'; // Show the popup
+}
+
+// Close popup functionality
+closePopupButton.addEventListener('click', function () {
+    popup.style.display = 'none'; // Hide the popup when the close button is clicked
+});
