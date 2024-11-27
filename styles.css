@@ -171,15 +171,12 @@ button:active {
     }
 }
 
-/* Mobile adjustments */
-@media (max-width: 600px) {
-    body {
-        padding: 0;
-    }
+/* Laptop and mobile adjustments */
+@media (max-width: 1280px) {
     .game-container {
-        width: 100%;
-        max-width: 100%;
-        padding: 15px;
+        width: 70%;
+        max-width: 700px;
+        padding: 20px;
     }
     h1 {
         font-size: 28px;
@@ -189,13 +186,36 @@ button:active {
     }
     input {
         font-size: 14px;
-        width: 75%;
+        width: 60%;
     }
     button {
         font-size: 12px;
-        padding: 8px 16px;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        width: 90%;
+        max-width: 90%;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    #instructions, #result {
+        font-size: 12px;
+    }
+    input {
+        font-size: 12px;
+        width: 70%;
+    }
+    button {
+        font-size: 10px;
+        padding: 8px 12px;
     }
     .popup-content {
         width: 90%;
     }
 }
+
