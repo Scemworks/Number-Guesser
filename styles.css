@@ -184,6 +184,10 @@ button:active {
 
 /* Mobile responsive adjustments */
 @media (max-width: 600px) {
+    body {
+        padding: 0; /* Remove side padding for smaller screens */
+    }
+
     .game-container {
         width: 100%;
         max-width: 100%;
