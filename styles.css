@@ -1,4 +1,4 @@
-/* Retro arcade style for the entire page */
+/* General Retro Arcade Style */
 body {
     font-family: 'Press Start 2P', cursive;
     background-color: #000;
@@ -12,31 +12,31 @@ body {
     box-sizing: border-box;
 }
 
-/* Game container styling */
+/* Game Container */
 .game-container {
     text-align: center;
     background-color: #222;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    width: 100%;
+    width: 90%;
     max-width: 360px;
     animation: fadeIn 1s ease-out;
     border: 3px solid #ff00ff;
     margin: 20px;
 }
 
-/* Title style */
+/* Title Style */
 h1 {
     color: #ff00ff;
-    font-size: 36px;
+    font-size: 2.2rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.8);
 }
 
-/* Instruction and result text */
+/* Text for Instructions and Result */
 #instructions, #result {
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 10px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 255, 0, 0.8);
@@ -46,12 +46,12 @@ h1 {
     color: #ffcc00;
 }
 
-/* Input field styling */
+/* Input Field */
 input {
     font-family: 'Press Start 2P', cursive;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 12px;
-    width: 80%;
+    width: calc(100% - 30px);
     margin: 10px 0;
     border: 2px solid #00ff00;
     border-radius: 5px;
@@ -67,7 +67,7 @@ input:focus {
     box-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
 }
 
-/* Button styling */
+/* Button Styling */
 .button-container {
     display: flex;
     justify-content: space-around;
@@ -76,9 +76,8 @@ input:focus {
 
 button {
     font-family: 'Press Start 2P', cursive;
-    font-size: 14px;
+    font-size: 0.9rem;
     padding: 12px 20px;
-    margin: 5px;
     cursor: pointer;
     border: 2px solid #00ff00;
     border-radius: 5px;
@@ -99,19 +98,7 @@ button:active {
     transform: scale(0.98);
 }
 
-#submitButton, #resetButton {
-    background-color: #333;
-}
-
-#submitButton {
-    color: #00ff00;
-}
-
-#resetButton {
-    color: #ff4500;
-}
-
-/* Popup styling */
+/* Popup Styling */
 .popup {
     display: none;
     position: fixed;
@@ -128,24 +115,25 @@ button:active {
 .popup-content {
     background-color: #222;
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    width: 300px;
+    width: 90%;
+    max-width: 300px;
     border: 3px solid #ff00ff;
 }
 
 .popup h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #ff00ff;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.8);
 }
 
 .popup p {
-    font-size: 18px;
+    font-size: 1rem;
     color: #f0f8ff;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #closePopup {
@@ -161,7 +149,7 @@ button:active {
     background-color: #ffcc00;
 }
 
-/* Animation */
+/* Fade In Animation */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -171,51 +159,49 @@ button:active {
     }
 }
 
-/* Laptop and mobile adjustments */
-@media (max-width: 1280px) {
+/* Media Queries */
+@media (max-width: 768px) {
     .game-container {
-        width: 70%;
-        max-width: 700px;
-        padding: 20px;
+        width: 95%;
     }
+
     h1 {
-        font-size: 28px;
+        font-size: 1.8rem;
     }
+
     #instructions, #result {
-        font-size: 14px;
+        font-size: 0.9rem;
     }
+
     input {
-        font-size: 14px;
-        width: 60%;
+        font-size: 0.9rem;
     }
+
     button {
-        font-size: 12px;
+        font-size: 0.8rem;
         padding: 10px 16px;
     }
+
+    .popup-content {
+        width: 95%;
+    }
 }
 
-@media (max-width: 600px) {
-    .game-container {
-        width: 90%;
-        max-width: 90%;
-        padding: 15px;
-    }
+@media (max-width: 480px) {
     h1 {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
+
     #instructions, #result {
-        font-size: 12px;
+        font-size: 0.8rem;
     }
+
     input {
-        font-size: 12px;
-        width: 70%;
+        font-size: 0.8rem;
     }
+
     button {
-        font-size: 10px;
+        font-size: 0.7rem;
         padding: 8px 12px;
     }
-    .popup-content {
-        width: 90%;
-    }
 }
-
