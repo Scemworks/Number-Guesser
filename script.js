@@ -9,9 +9,28 @@ const submitButton = document.getElementById('submitButton');
 const resetButton = document.getElementById('resetButton');
 const popup = document.querySelector('.popup');
 const closePopupButton = document.getElementById('closePopup');
+const numberButtons = document.querySelectorAll('.number-button'); // Get all number buttons
+const clearButton = document.getElementById('clear'); // Get clear button
+
+// Add event listeners to all number buttons
+numberButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        guessInput.value += button.dataset.number; // Add the number to the input field
+    });
+});
+
+// Add event listener to clear button
+clearButton.addEventListener('click', () => {
+    guessInput.value = ''; // Clear the input field when the clear button is clicked
+});
+
+// Disable keyboard input
+guessInput.addEventListener('keydown', (event) => {
+    event.preventDefault(); // Prevent the default behavior of the keydown event
+});
 
 // Function to handle the guess
-submitButton.addEventListener('click', function () {
+submitButton.addEventListener('click', () => {
     const guess = parseInt(guessInput.value);
 
     if (isNaN(guess)) {
@@ -73,6 +92,7 @@ function showPopup(message) {
 }
 
 // Close popup functionality
-closePopupButton.addEventListener('click', function () {
+closePopupButton.addEventListener('click', () => {
     popup.style.display = 'none'; // Hide the popup when the close button is clicked
 });
+

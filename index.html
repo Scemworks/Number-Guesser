@@ -7,22 +7,33 @@
     <meta name="description" content="Step back to the 80s with neon vibes and pixelated fun! Guess the number, get hints, and relive arcade magic. Play now! ✨" />
     <meta name="type" content="website" />
     <meta name="url" content="https://guess-ur-num.vercel.app/" />
-    <meta name="title" content="Retro-Style Number Guessing Game" />
-    <meta name="description" content="Step back to the 80s with neon vibes and pixelated fun! Guess the number, get hints, and relive arcade magic. Play now! ✨" />
     <meta name="image" content="https://replug.io/images/example.png" />
     <title>Number Guessing Game</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Retro font -->
-    <link rel="stylesheet" href="styles.css"> <!-- Corrected CSS file link -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="game-container">
         <h1>Number Guessing Game</h1>
         <p id="instructions">I'm thinking of a number between 1 and 100.</p>
-        <p id="result">Enter your guess:</p> <!-- Feedback on guesses -->
-        <input type="number" id="guessInput" placeholder="Your guess" />
+        <p id="result">Enter your guess:</p>
+        <input type="text" id="guessInput" placeholder="Your guess" readonly />
         <div class="button-container">
             <button id="submitButton">Submit Guess</button>
             <button id="resetButton">Reset Game</button>
+        </div>
+        <div class="retro-keyboard">
+            <button id="clear">CLR</button>
+            <button class="number-button" id="num-0" data-number="0">0</button>
+            <button class="number-button" id="num-1" data-number="1">1</button>
+            <button class="number-button" id="num-2" data-number="2">2</button>
+            <button class="number-button" id="num-3" data-number="3">3</button>
+            <button class="number-button" id="num-4" data-number="4">4</button>
+            <button class="number-button" id="num-5" data-number="5">5</button>
+            <button class="number-button" id="num-6" data-number="6">6</button>
+            <button class="number-button" id="num-7" data-number="7">7</button>
+            <button class="number-button" id="num-8" data-number="8">8</button>
+            <button class="number-button" id="num-9" data-number="9">9</button>
         </div>
     </div>
     <div class="popup">

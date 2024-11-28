@@ -19,11 +19,15 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    width: 90%;
+    width: 90vw;
     max-width: 360px;
     animation: fadeIn 1s ease-out;
     border: 3px solid #ff00ff;
     margin: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Title Style */
@@ -98,6 +102,25 @@ button:active {
     transform: scale(0.98);
 }
 
+/* Number Button Styling */
+.number-button {
+    background-color: #333;
+    color: #00ff00;
+    padding: 12px 20px;
+}
+
+.number-button:hover {
+    background-color: #ff00ff;
+    color: #111;
+    transform: scale(1.05);
+}
+
+.number-button:active {
+    background-color: #ffcc00;
+    color: #111;
+    transform: scale(0.98);
+}
+
 /* Popup Styling */
 .popup {
     display: none;
@@ -121,6 +144,10 @@ button:active {
     width: 90%;
     max-width: 300px;
     border: 3px solid #ff00ff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .popup h2 {
@@ -205,3 +232,4 @@ button:active {
         padding: 8px 12px;
     }
 }
+
